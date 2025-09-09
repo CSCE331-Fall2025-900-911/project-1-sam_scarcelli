@@ -1,0 +1,167 @@
+/* Main Page */
+body {
+    background-color: #e4d0bb;
+}
+/* Top Bar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+.home .top-bar {
+    background-color: #55845c;
+}
+
+.portfolio .top-bar {
+    background-color: #3a7394;
+}
+
+.qualifications .top-bar {
+    background-color: #891212;
+}
+
+.service .top-bar {
+    background-color: #be6c35;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  padding-top: 100px;
+}
+
+.sidebar a {
+  padding: 20px 20px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.sidebar a:hover {
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.home .sidebar a:hover {
+    color: #55845c;
+}
+
+.portfolio .sidebar a:hover {
+    color: #3a7394;
+}
+
+.qualifications .sidebar a:hover {
+    color: #891212;
+}
+
+.service .sidebar a:hover {
+    color: #be6c35;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 50px;
+  margin-top: 200px;
+  margin-left: 300px;
+}
+
+.bubble1 {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #891212;
+    color: white;
+    text-align: center;
+    line-height: 300px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: -50px;
+    margin-top: -50px;
+    position: fixed;
+}
+
+.bubble2 {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #891212;
+    color: white;
+    text-align: center;
+    line-height: 300px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 150px;
+    margin-left: 500px;
+    position: fixed;
+}
+
+.profile-img {
+  width: 350px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.image-fit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-under {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  width: 350px;
+  text-align: left;
+}
+
+
+.bio-text {
+  color: black;
+}
+
+.name {
+  font-size: 50px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.description {
+  font-size: 20px;
+  margin-top: 20px;
+  width: 250px;
+  color: rgb(39, 39, 39);
+}
+
+.under_photo {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 50px;
+  margin-top: 200px;
+  margin-left: 300px;
+}

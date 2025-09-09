@@ -1,36 +1,39 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Index</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="first_style.css">
 </head>
 
-<body>
+<body class="home">
 
-<div style="position: fixed; top: 0; left: 0; width: 100%; background-color:#55845c; color: white; padding: 40px 0; text-align: center; font-size: 50px; font-weight: bold;">
-  Index
-</div>
+  <!-- Top Bar -->
+  <div class="top-bar">Home</div>
 
-<div style="height:100vh; width:200px; position:fixed; top:0; left:0; background-color:#333; padding-top:20px;">
-  <a href="index.html" style="padding:10px 15px; text-decoration:none; color:white; display:block;"
-  onmouseover="this.style.fontWeight='bold'; this.style.transform='scale(1.1)'; this.style.color='#55845c';"
-  onmouseout="this.style.fontWeight='normal'; this.style.transform='scale(1)'; this.style.color='white';">Index</a>
-  <a href="portfolio.html" style="padding:10px 15px; text-decoration:none; color:white; display:block;"
-  onmouseover="this.style.fontWeight='bold'; this.style.transform='scale(1.1)'; this.style.color='#55845c'"
-  onmouseout="this.style.fontWeight='normal'; this.style.transform='scale(1)'; this.style.color='white';">Portfolio</a>
-  <a href="qualifications.html" style="padding:10px 15px; text-decoration:none; color:white; display:block;"
-  onmouseover="this.style.fontWeight='bold'; this.style.transform='scale(1.1)'; this.style.color='#55845c'"
-  onmouseout="this.style.fontWeight='normal'; this.style.transform='scale(1)'; this.style.color='white';">Qualifications</a>
-  <a href="service.html" style="padding:10px 15px; text-decoration:none; color:white; display:block;"
-  onmouseover="this.style.fontWeight='bold'; this.style.transform='scale(1.1)'; this.style.color='#55845c'"
-  onmouseout="this.style.fontWeight='normal'; this.style.transform='scale(1)'; this.style.color='white';">Service</a>
-</div>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="qualifications.html">Qualifications</a>
+    <a href="service.html">Service</a>
+  </div>
 
-<img src="IMG_2720 (1).jpg" alt="Descriptive text" style="float: right; margin: 150px; width: 350px;">
+  <!-- Main Content -->
+  <div class="main-content">
+    <img src="IMG_2720 (1).jpg" alt="Descriptive text" class="profile-img">
 
-<div style="margin-left: 200px; margin-top: 150px; margin-right: 320px; padding: 35px; color: black; font-size: 40px;">
-<p> About Me: </p>
-<div>
+    <div class="bio-text">
+      <p class="name">Sam Scarcelli</p>
+      <p class="subtitle">A Bit About Me</p>
+      <p class="description">
+        I am an undergraduate student at Texas A&M studying Computer Science.
+        I take pride in upholding high standards, being accountable, adaptable, and in contribution to a meaningful effort. 
+        I would love to dive more into the world of programming and all of its capabilities.
+      </p>
+    </div>
+  </div>
 
 </body>
 </html>
+
