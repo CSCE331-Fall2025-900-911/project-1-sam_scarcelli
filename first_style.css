@@ -2,6 +2,12 @@
 body {
     background-color: #e4d0bb;
 }
+
+body.portfolio {
+  overflow-y: auto;
+  height: 100vh;
+}
+
 /* Top Bar */
 .top-bar {
   position: fixed;
@@ -112,6 +118,7 @@ body {
   margin-left: 300px;
 }
 
+/*Bubbles for Qualifications page*/
 .bubble1 {
     width: 400px;
     height: 400px;
@@ -182,15 +189,19 @@ body {
   cursor: pointer;
 }
 
-.bubble_text {
+.bubble-text {
   max-height: 100%;
-  overflow: auto;
   padding: 10px;
-  text-align: left;
+  text-align: center;
   font-size: 18px;
 }
 
-.profile-img {
+.bubble-text ul li {
+  margin-bottom: 10px;
+}
+
+/*Project sections and image for Portfolio page*/
+.profile-image {
   width: 350px;
   padding: 5px;
   border-radius: 10px;
@@ -202,21 +213,35 @@ body {
     align-items: center;
 }
 
-.image-under {
-  margin-top: 30px;
-  font-size: 18px;
-  color: #333;
-  padding: 10px;
-  border-radius: 8px;
-  width: 350px;
-  text-align: left;
+.project-sections {
+  margin-top: 20px;
+  padding: 20px;
 }
 
+.project {
+  margin-bottom: 30px;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project h2 {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  color: #3a7394; 
+}
+
+.project p {
+  font-size: 1em;
+  line-height: 1.6;
+}
 
 .bio-text {
   color: black;
 }
 
+/*Basic Text Structure*/
 .name {
   font-size: 50px;
   margin: 0;
@@ -242,3 +267,33 @@ body {
   margin-top: 200px;
   margin-left: 300px;
 }
+
+/*Service Page Structure*/
+.service-projects {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.service-item {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.service-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.service-description {
+  margin-top: 15px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
+
