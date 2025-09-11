@@ -273,8 +273,8 @@ body.portfolio {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 40px;
-  padding: 40px 20px;
+  gap: 60px;
+  padding: 20px -20px;
 }
 
 .service-item {
@@ -285,15 +285,21 @@ body.portfolio {
 .service-image {
   width: 100%;
   max-width: 500px;
-  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
+
+
 
 .service-description {
   margin-top: 15px;
   font-size: 1.1em;
   line-height: 1.6;
   color: #333;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
