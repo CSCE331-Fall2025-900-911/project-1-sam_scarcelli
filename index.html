@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
-  <link rel="stylesheet" href="first_style.css">
+  <link id="themeStylesheet" rel="stylesheet" href="first_style.css">
 </head>
 
 <body class="home">
@@ -17,6 +17,8 @@
     <a href="portfolio.html">Portfolio</a>
     <a href="qualifications.html">Qualifications</a>
     <a href="service.html">Service</a>
+    <a href="genai.html">GenAI</a>
+    <button id="toggle">Toggle Theme</button>
   </div>
 
   <!-- Main Content -->
@@ -27,12 +29,33 @@
       <p class="name">Sam Scarcelli</p>
       <p class="subtitle">A Bit About Me</p>
       <p class="description">
-        I am an undergraduate student at Texas A&M studying Computer Science.
-        I take pride in upholding high standards, being accountable, adaptable, and in contribution to a meaningful effort. 
+        I am a 20 year old undergraduate student at Texas A&M on a 4-year program for a Bachelor of Science degree in Computer Science.
+        I am from Fort Worth, Texas but, being a military brat, I have lived all over the world and have had to deal with constant change frequently.
+        This has developed me into a resilient person who is capable of handling difficult situations and flexible to handle adversity.
+        I take pride in upholding high standards, being accountable, adaptable, and in contributing to a meaningful effort.
+        I work well in teams, not being fearful to take charge, but am also capable of completing projects individually.
         I would love to dive more into the world of programming and all of its capabilities.
       </p>
     </div>
   </div>
+
+
+
+<!-- JavaScript Toggle -->
+<script>
+  const toggleBtn = document.getElementById("toggle");
+  const stylesheet = document.getElementById("themeStylesheet");
+
+  toggleBtn.addEventListener("click", () => {
+    const currentHref = stylesheet.getAttribute("href");
+
+    if (currentHref === "first_style.css") {
+      stylesheet.setAttribute("href", "second_style.css?v" + new Date().getTime());
+    } else {
+      stylesheet.setAttribute("href", "first_style.css");
+    }
+  });
+</script>
 
 </body>
 </html>

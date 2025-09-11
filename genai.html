@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GenAI</title>
+  <link id="themeStylesheet" rel="stylesheet" href="first_style.css">
+</head>
+
+<body class="genai">
+
+  <!-- Top Bar -->
+  <div class="top-bar">GenAI</div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="qualifications.html">Qualifications</a>
+    <a href="service.html">Service</a>
+    <a href="genai.html">GenAI</a>
+    <button id="toggle">Toggle Theme</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <p>Stuff</p>
+  </div>
+
+
+<!-- JavaScript Toggle -->
+<script>
+  const toggleBtn = document.getElementById("toggle");
+  const stylesheet = document.getElementById("themeStylesheet");
+
+  toggleBtn.addEventListener("click", () => {
+    const currentHref = stylesheet.getAttribute("href");
+
+    if (currentHref === "first_style.css") {
+      stylesheet.setAttribute("href", "second_style.css?v" + new Date().getTime());
+    } else {
+      stylesheet.setAttribute("href", "first_style.css");
+    }
+  });
+</script>
+
+</body>
+</html>
+
+

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Qualifications</title>
-  <link rel="stylesheet" href="first_style.css">
+  <link id="themeStylesheet" rel="stylesheet" href="first_style.css">
 </head>
 
 <body class="qualifications">
@@ -17,22 +17,53 @@
     <a href="portfolio.html">Portfolio</a>
     <a href="qualifications.html">Qualifications</a>
     <a href="service.html">Service</a>
+    <a href="genai.html">GenAI</a>
+    <button id="toggle">Toggle Theme</button>
   </div>
 
   <!-- Main Content -->
   <div class="main-content">
+
     <a href="Sam's Resume.pdf" target="_blank" class="bubbleR">My Resume</a>
+
     <div class="bubble1">
-      Technical Skills
+      <div class="bubble-text">
+        <p class="subtitle"><strong>Technical Skills:</strong></p>
+        <ul>
+          <li>Proficient in Microsoft Excel, Word, Teams, and PowerPoint</li>
+          <li>Certified in Python, C++, C, Haskell, Java,  with experience in Linux, HTML and CSS</li>
+          <li>5 years of coding experience, with personal projects in 5+ languages</li>
+        </ul>
+      </div>
     </div>
 
     <div class="bubble2">
-      Areas of Interest
-    </div>"
+      <div class="bubble-text">
+        <p class="subtitle"><strong>Areas of Interest:</strong></p>
+        <ul>
+          <li></li>
+        </ul>
+      </div>
+    </div>
 
   </div>
 
 
+<!-- JavaScript Toggle -->
+<script>
+  const toggleBtn = document.getElementById("toggle");
+  const stylesheet = document.getElementById("themeStylesheet");
+
+  toggleBtn.addEventListener("click", () => {
+    const currentHref = stylesheet.getAttribute("href");
+
+    if (currentHref === "first_style.css") {
+      stylesheet.setAttribute("href", "second_style.css?v" + new Date().getTime());
+    } else {
+      stylesheet.setAttribute("href", "first_style.css");
+    }
+  });
+</script>
 
 </body>
 </html>

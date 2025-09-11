@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio</title>
-  <link rel="stylesheet" href="first_style.css">
+  <link id="themeStylesheet" rel="stylesheet" href="first_style.css">
 </head>
 
 <body class="portfolio">
@@ -17,6 +17,8 @@
     <a href="portfolio.html">Portfolio</a>
     <a href="qualifications.html">Qualifications</a>
     <a href="service.html">Service</a>
+    <a href="genai.html">GenAI</a>
+    <button id="toggle">Toggle Theme</button>
   </div>
 
   <!-- Main Content -->
@@ -24,9 +26,7 @@
     <div class="image-fit">
       <img src="portfolio_pic.webp" alt="Descriptive text" class="profile-img">
       <div class="image-under">
-        <ul class="subtitle" style="font-weight: bold;">Technical Skills:</ul>
-        <li class="description" style="font-weight: lighter;">Proficient in Microsoft Excel, Word, Teams, and PowerPoint</li>
-        <li class="description" style="font-weight: lighter;">Certified in Python, C++, C, Haskell, Java, HTML, with experience in Linux and CSS</li>
+        
         
       </div>
     </div>
@@ -38,6 +38,23 @@
       </ul>
     </div>
   </div>
+
+
+<!-- JavaScript Toggle -->
+<script>
+  const toggleBtn = document.getElementById("toggle");
+  const stylesheet = document.getElementById("themeStylesheet");
+
+  toggleBtn.addEventListener("click", () => {
+    const currentHref = stylesheet.getAttribute("href");
+
+    if (currentHref === "first_style.css") {
+      stylesheet.setAttribute("href", "second_style.css?v" + new Date().getTime());
+    } else {
+      stylesheet.setAttribute("href", "first_style.css");
+    }
+  });
+</script>
 
 </body>
 </html>
