@@ -43,8 +43,8 @@ body.portfolio {
     background-color: #692282;
 }
 
-/* Sidebar */
-.sidebar {
+/* Sidebar Buttons */
+.buttons {
   height: 100vh;
   width: 200px;
   position: fixed;
@@ -59,40 +59,43 @@ body.portfolio {
 
 }
 
-.sidebar a {
+.buttons a {
   padding: 20px 20px;
+  font-size: 20px;
   text-decoration: none;
+  font-weight: lighter;
   color: white;
   display: block;
   transition: all 0.2s ease;
 }
 
-.sidebar a:hover {
+.buttons a:hover {
   font-weight: bold;
   transform: scale(1.1);
 }
 
-.home .sidebar a:hover {
+.home .buttons a:hover {
     color: #55845c;
 }
 
-.portfolio .sidebar a:hover {
+.portfolio .buttons a:hover {
     color: #3a7394;
 }
 
-.qualifications .sidebar a:hover {
+.qualifications .buttons a:hover {
     color: #891212;
 }
 
-.service .sidebar a:hover {
+.service .buttons a:hover {
     color: #be6c35;
 }
 
-.genai .sidebar a:hover {
+.genai .buttons a:hover {
     color: #692282;
 }
 
 #toggle {
+  padding: 15px 10px;
   margin: auto;
   background-color: #acb3ad;
   color: white;
