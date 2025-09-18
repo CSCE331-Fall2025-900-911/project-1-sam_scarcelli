@@ -42,10 +42,15 @@
       <div class="bubble-text">
         <p class="subtitle"><strong>Areas of Interest:</strong></p>
         <ul>
-          <li><strong>Artificial Intelligence</strong>: A rapidly evolving field so I am committed to deepening my understanding to stay ahead on innovation</li>
-          <li><strong>Cybersecurity</strong>: With a prospective career in the military, this is a critical skill for national defense</li>
-          <li><strong>Game Development</strong>: A long-standing personal passion that I am eager to explore more deeply and develop interactive experiences</li>
+          <li><strong><a href="https://www.intel.com/content/www/us/en/learn/ai-use-cases.html?cid=sem&source=sa360&campid=2025_ao_amr_us_comm_eai_eahqr_rep_awa_cons_txt_gen_broad_bng_is_intel_hq-learn-entai-obs_fc25023&ad_group=Gen_AI-UseCases-Learn-eai_b2b1-bp_Broad&intel_term=ai+use+cases&sa360id=43700081828087731&gclid=e91ddc63a4f71a6667d8b4a8d783c7cc&gclsrc=3p.ds&msclkid=e91ddc63a4f71a6667d8b4a8d783c7cc" target="_blank">
+            Artificial Intelligence</a></strong>: A rapidly evolving field so I am committed to deepening my understanding to stay ahead on innovation</li>
+          <li><strong><a href="https://www.airforce.com/careers/intelligence" target="_blank">
+            Cybersecurity</a></strong>: With a prospective career in the military, this is a critical skill for national defense</li>
+          <li><strong><a href="https://www.coursera.org/articles/game-developer?msockid=203a2ae32c6f654d39fb39c12d676480" target="_blank">
+            Game Development</a></strong>: A long-standing personal passion that I am eager to explore more deeply and develop interactive experiences</li>
         </ul>
+        To learn more, click on bolded names
+
       </div>
     </div>
 
@@ -66,16 +71,25 @@
   const toggleBtn = document.getElementById("toggle");
   const stylesheet = document.getElementById("themeStylesheet");
 
+  // Load saved theme on page load
+  const savedTheme = localStorage.getItem("selectedTheme");
+  if (savedTheme === "second") {
+    stylesheet.setAttribute("href", "second_style.css");
+  }
+
   toggleBtn.addEventListener("click", () => {
     const currentHref = stylesheet.getAttribute("href");
 
-    if (currentHref === "first_style.css") {
+    if (currentHref.includes("first_style.css")) {
       stylesheet.setAttribute("href", "second_style.css?v" + new Date().getTime());
+      localStorage.setItem("selectedTheme", "second");
     } else {
       stylesheet.setAttribute("href", "first_style.css");
+      localStorage.setItem("selectedTheme", "first");
     }
   });
 </script>
+
 
 </body>
 </html>

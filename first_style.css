@@ -241,8 +241,8 @@ body.portfolio {
 
 /*Bubbles for Qualifications page*/
 .bubble1 {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     background-color: #891212;
     color: white;
@@ -258,8 +258,8 @@ body.portfolio {
 }
 
 .bubble2 {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     margin-top: -250px;
     margin-left: 500px;
     border-radius: 50%;
@@ -321,6 +321,17 @@ body.portfolio {
 .bubble-text ul li {
   margin-bottom: 10px;
 }
+
+.bubble-text a {
+  color: white;
+  text-decoration: none;
+}
+
+.bubble-text a:hover {
+  color: rgb(200, 200, 200);
+  text-decoration: underline;
+}
+
 
 /*Service Page Structure*/
 .service-projects {

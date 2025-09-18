@@ -53,15 +53,15 @@
       </section>
     </div>
 
-    <div class="contact-footer">
+  </div>
+
+  <div class="contact-footer">
       <strong>Contact Me: </strong>
       <a href="mailto:sam_scarcelli@tamu.edu" target="_blank">Email</a>
       <a href="https://www.linkedin.com/in/sam-scarcelli-a5047628b/" target="_blank">LinkedIn</a>
       <a href="https://github.com/sam-scarcelli" target="_blank">GitHub</a>
       <a href="https://www.instagram.com/sam_scarcelli13" target="_blank"> Instagram</a>
       <a href="tel:+9016121625" target="_blank">Phone</a>
-    </div>
-
   </div>
 
 
@@ -70,16 +70,25 @@
   const toggleBtn = document.getElementById("toggle");
   const stylesheet = document.getElementById("themeStylesheet");
 
+  // Load saved theme on page load
+  const savedTheme = localStorage.getItem("selectedTheme");
+  if (savedTheme === "second") {
+    stylesheet.setAttribute("href", "second_style.css");
+  }
+
   toggleBtn.addEventListener("click", () => {
     const currentHref = stylesheet.getAttribute("href");
 
-    if (currentHref === "first_style.css") {
+    if (currentHref.includes("first_style.css")) {
       stylesheet.setAttribute("href", "second_style.css?v" + new Date().getTime());
+      localStorage.setItem("selectedTheme", "second");
     } else {
       stylesheet.setAttribute("href", "first_style.css");
+      localStorage.setItem("selectedTheme", "first");
     }
   });
 </script>
+
 
 </body>
 </html>

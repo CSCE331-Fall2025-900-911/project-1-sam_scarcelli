@@ -73,16 +73,25 @@
   const toggleBtn = document.getElementById("toggle");
   const stylesheet = document.getElementById("themeStylesheet");
 
+  // Load saved theme on page load
+  const savedTheme = localStorage.getItem("selectedTheme");
+  if (savedTheme === "second") {
+    stylesheet.setAttribute("href", "second_style.css");
+  }
+
   toggleBtn.addEventListener("click", () => {
     const currentHref = stylesheet.getAttribute("href");
 
-    if (currentHref === "first_style.css") {
+    if (currentHref.includes("first_style.css")) {
       stylesheet.setAttribute("href", "second_style.css?v" + new Date().getTime());
+      localStorage.setItem("selectedTheme", "second");
     } else {
       stylesheet.setAttribute("href", "first_style.css");
+      localStorage.setItem("selectedTheme", "first");
     }
   });
 </script>
+
 
 </body>
 </html>
